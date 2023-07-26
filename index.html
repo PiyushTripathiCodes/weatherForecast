@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Weather Forecast</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+  </head>
+  <body>
+    <div class="app-card">
+      <div class="nav">
+        <header class="city-name">
+          <label for="Name" id="label">Your city </label>
+          <input
+            type="text"
+            id="Name"
+            name="Name"
+            placeholder="Search....."
+            spellcheck="false"
+            required
+            class="input"
+          />
+          <button class="btn"><img src="img/search-icon.png" /></button>
+        </header>
+        <div class="City-display">⚡Delhi</div>
+      </div>
+      <section class="container">
+        <section class="section1">
+          <div class="time-date">5:05 PM, Mon, Nov 23</div>
+
+          <div class="icon-temperature">
+            <img src="img/cloudy.png" alt="cloudy" class="icon" />
+            <h1 class="temperature"><span class="degree">35</span> &deg;C</h1>
+          </div>
+
+          <h1 class="Weather">Cloudy</h1>
+
+          <div class="wind-humidty">
+            <div class="humidity">
+              <p>Humidity</p>
+              <h4 style="color: #252525">
+                <span class="humidity-percentage">45</span>%
+              </h4>
+            </div>
+            <div class="wind">
+              <p>Wind Speed</p>
+              <h4 style="color: #252525">
+                <span class="wind-speed">45</span> km/hr
+              </h4>
+            </div>
+          </div>
+        </section>
+        <section class="section2">
+          <div class="container-card">
+            <div class="data-card" class="today">
+              <h1 class="text">Later Today</h1>
+              <img src="img/cloudy.png" alt="" class="data-card-icon" />
+              <p>Precipitation</p>
+              <p class="text"><span class="pop">33</span>%</p>
+            </div>
+            <div class="data-card">
+              <h1 class="text day-2">Nov 23</h1>
+              <img src="img/cloudy.png" alt="" class="data-card-icon" />
+              <p>Precipitation</p>
+              <p class="text"><span class="pop">33</span>%</p>
+            </div>
+            <div class="data-card">
+              <h1 class="text day-3">Nov 24</h1>
+              <img src="img/cloudy.png" alt="" class="data-card-icon" />
+              <p>Precipitation</p>
+              <p class="text"><span class="pop">33</span>%</p>
+            </div>
+            <div class="data-card">
+              <h1 class="text day-4">Nov 25</h1>
+              <img src="img/cloudy.png" alt="" class="data-card-icon" />
+              <p>Precipitation</p>
+              <p class="text"><span class="pop">33</span>%</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>
