@@ -191,10 +191,24 @@ setInterval(() => {
   timeDateElement.innerHTML = `${hourIn12Format}:${minutes} ${ampm}, ${dayFull[day]}, ${months[month]} ${date}`;
 
   const date2 = new Date();
-  const monthSide = date2.getMonth();
-  day2.innerHTML = `${months[monthSide]} ${date2.getDate() + 1}`;
-  day3.innerHTML = `${months[monthSide]} ${date2.getDate() + 2}`;
-  day4.innerHTML = `${months[monthSide]} ${date2.getDate() + 3}`;
+  const tomorrow = new Date(date2);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const month1 = tomorrow.getMonth();
+  const dateI = tomorrow.getDate();
+
+  const dayAftertomorrow = new Date(date2);
+  dayAftertomorrow.setDate(dayAftertomorrow.getDate() + 2);
+  const month2 = dayAftertomorrow.getMonth();
+  const dateII = dayAftertomorrow.getDate();
+
+  const DaydayAftertomorrow = new Date(date2);
+  DaydayAftertomorrow.setDate(DaydayAftertomorrow.getDate() + 3);
+  const month3 = DaydayAftertomorrow.getMonth();
+  const dateIII = DaydayAftertomorrow.getDate();
+
+  day2.innerHTML = `${months[month1]} ${dateI}`;
+  day3.innerHTML = `${months[month2]} ${dateII}`;
+  day4.innerHTML = `${months[month3]} ${dateIII}`;
 }, 1000);
 
 ///////////////////////////////////////////////////////////////////////
